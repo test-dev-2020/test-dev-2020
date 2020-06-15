@@ -1,0 +1,36 @@
+@media (max-width:1180px) {
+  .faq__inner{
+    flex-wrap: wrap;
+  }
+  .faq__main {
+    min-width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+  }
+  .faq__aside{
+    min-width: 100%;
+  }
+  .faq__tabs{
+    justify-content: center;
+  }
+}
+
+
+@media (max-width:600px) {
+  .faq__tabs{
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    justify-content: flex-start;
+   
+  }
+  .faq__tabs .tab.tab-all {
+    padding: 8px 16px 8px 16px;
+}
+.faq__tabs .tab {
+white-space: nowrap;
+  padding: 8px 16px 8px 16px;
+  &::before {
+    display: none;
+  }
+}
+}
