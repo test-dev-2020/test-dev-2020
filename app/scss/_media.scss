@@ -9,6 +9,18 @@
   }
   .faq__aside{
     min-width: 100%;
+    .faq__content.js-faq-content.video{
+      text-align: center;
+    }
+    iframe {
+      margin: 0 auto;
+      width: 50%;
+    }
+
+  }
+  .faq__aside-support{
+   text-align: center;
+    img {width: 50%;}
   }
   .faq__tabs{
     justify-content: center;
