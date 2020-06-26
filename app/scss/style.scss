@@ -1,0 +1,339 @@
+@import "_vars";
+@import "_global";
+
+.search {
+  background-image: url(../images/search-bg.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.search__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 160px;
+}
+.serch__box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.search__box-title {
+  font-size: 32px;
+  line-height: 48px;
+  color: #fff;
+  @include f300;
+}
+
+.search__box-search {
+  max-width: 1280px;
+  width: 100%;
+  input {
+    height: 58px;
+    max-width: 1280px;
+    border-radius: 4px;
+    box-shadow: inset 0px 5px 27px 0px rgba(0, 0, 0, 0.5);
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(53, 53, 53);
+    width: 100%;
+    padding: 0 50px 0 28px;
+    font-size: 18px;
+    @include f300;
+  }
+  position: relative;
+  div {
+   
+    outline: none;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+  }
+}
+
+.faq {
+  background-color: #151c24;
+  color: #fff;
+  min-height: 85vh;
+}
+.faq__inner {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 33px;
+  align-items: flex-start;
+}
+.faq__main {
+  max-width: 920px;
+  width: 100%;
+  background-color: #11171f;
+  padding: 30px;
+}
+
+.faq__tabs {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #1f252c;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -13px;
+}
+.faq__tabs .tab {
+  border: none;
+  cursor: pointer;
+  margin: 0 0 11px 13px;
+  padding: 11px 32px 11px 57px;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.35);
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 15px;
+  line-height: 20px;
+  color: #fff;
+  transition: all 0.2s;
+  @include f500;
+  &:hover {
+    background-color: #fff;
+    color: #292929;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
+    background-image: -moz-linear-gradient(
+      90deg,
+      rgb(204, 204, 204) 0%,
+      rgb(238, 238, 238) 100%
+    );
+    background-image: -webkit-linear-gradient(
+      90deg,
+      rgb(204, 204, 204) 0%,
+      rgb(238, 238, 238) 100%
+    );
+    background-image: -ms-linear-gradient(
+      90deg,
+      rgb(204, 204, 204) 0%,
+      rgb(238, 238, 238) 100%
+    );
+  }
+}
+.faq__tabs .tab.mixitup-control-active {
+  background-color: #fff;
+  color: #292929;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
+  background-image: -moz-linear-gradient(
+    90deg,
+    rgb(204, 204, 204) 0%,
+    rgb(238, 238, 238) 100%
+  );
+  background-image: -webkit-linear-gradient(
+    90deg,
+    rgb(204, 204, 204) 0%,
+    rgb(238, 238, 238) 100%
+  );
+  background-image: -ms-linear-gradient(
+    90deg,
+    rgb(204, 204, 204) 0%,
+    rgb(238, 238, 238) 100%
+  );
+}
+.faq__tabs .tab.mixitup-control-active:before {
+  filter: brightness(0.15);
+}
+.faq__tabs .tab:hover::before {
+  filter: brightness(0.15);
+}
+
+.faq__tabs .tab.tab-tc.mixitup-control-active::before {
+  filter: brightness(1);
+  color: #fff;
+  background-color: #1f1f1f;
+}
+.tab {
+  background-color: $block;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 17px;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
+.faq__tabs .tab.tab-all {
+  padding: 11px 32px 11px 32px;
+}
+.tab-my-acc::before {
+  background-image: url("../images/icons/user-ico.png");
+}
+.tab-tc::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: "?";
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #d2d2d2;
+  font-size: 14px;
+  color: #1b222a;
+}
+.faq__tabs .tab.tab-tc:hover::before {
+  filter: brightness(1);
+  color: #fff;
+  background-color: #1f1f1f;
+}
+.tab-deposit::before {
+  background-image: url("../images/icons/wallet.png");
+}
+.tab-promo::before {
+  background-image: url("../images/icons/promotions.png");
+}
+
+.tab-promotions::before {
+  background-image: url("../images/icons/promo.png");
+}
+.tab-casino::before {
+  background-image: url("../images/icons/casino.png");
+}
+.tab-video::before {
+  background-image: url("../images/icons/video.png");
+  width: 20px;
+  height: 14px;
+}
+.tab-esport::before {
+  background-image: url("../images/icons/gamepad.png");
+  width: 20px;
+  
+}
+.tab-sport::before {
+  background-image: url("../images/icons/sport.png");
+  width: 20px;
+ 
+}
+.faq__questions-title {
+  padding-top: 10px;
+  font-size: 22px;
+  line-height: 33px;
+  @include f400;
+}
+.b-faq {
+  margin: 5px auto;
+  background-color: $block;
+  color: $text;
+}
+.faq__text {
+  color: $text;
+  font-size: 16px;
+  @include f400;
+}
+.b-faq .faq__title {
+  position: relative;
+  display: block;
+  padding: 15px 60px 15px 15px;
+  border-radius: 3px;
+  transition: background-color 0.2s;
+  &::before {
+    transition: all .3s;
+    content: '';
+    position: absolute;
+    background-image: url("../images/icons/arrow.png");
+    width: 23px;
+    height: 12px;
+    right: 20px;
+    top: 20px;
+    transform: rotate(-90deg);
+  }
+}
+.faq__title.js-faq-title.faq__active{
+  &::before {
+    transition: all .3s;
+   transform: rotate(0deg);
+  }
+}
+
+.b-faq .faq__content {
+  display: none;
+}
+.faq__content {
+  padding: 15px;
+  font-size: 14px;
+  color: #fff;
+  @include f400;
+  line-height: 24px;
+}
+
+.faq__aside {
+  padding: 12px;
+  max-width: 340px;
+  width: 100%;
+  background-color: #11171f;
+}
+
+.faq__aside-title {
+  font-size: 22px;
+  line-height: 33px;
+  margin-bottom: 20px;
+  @include f400;
+}
+
+.hidden {
+  display: none;
+}
+
+.faq__video{
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  width: 100%;
+ 
+  iframe {
+    margin: 0 auto;
+  }
+}
+.faq__content table {
+  width: 100%;
+}
+.faq__content table td {
+
+  padding: 10px;
+ 
+}
+.faq__content table tr td:first-child {
+
+ width: 20%;
+ 
+}
+.faq__content table tr td:last-child {
+
+  width: 80%;
+  
+ }
+
+
+
+.faq__content.js-faq-content  table {
+  border-top: transparent;
+}
+.faq__content.js-faq-content  table tr:first-child {
+  background-color: grey;
+  position: static;
+  top: 20px;
+ 
+}
+
+.faq__aside-support{
+  padding-top: 10px;
+  img {
+    width: 100%;
+  }
+
+}
+
+@import "_media";
